@@ -63,7 +63,7 @@ def one():
     if flag in range(6, 11):
         w = str(my_dict[flag].text())
         ind = -1
-        for i in range(len(five_words)):
+        for i in range(5):
             if english:
                 if (five_words[i].find(w) != -1):
                     ind = i
@@ -102,7 +102,7 @@ def two():
     if flag in range(6, 11):
         w = str(my_dict[flag].text())
         ind = -1
-        for i in range(len(five_words)):
+        for i in range(5):
             if english:
                 if (five_words[i].find(w) != -1):
                     ind = i
@@ -139,7 +139,7 @@ def three():
     if flag in range(6, 11):
         w = str(my_dict[flag].text())
         ind = -1
-        for i in range(len(five_words)):
+        for i in range(5):
             if english:
                 if (five_words[i].find(w) != -1):
                     ind = i
@@ -176,7 +176,7 @@ def four():
     if flag in range(6, 11):
         w = str(my_dict[flag].text())
         ind = -1
-        for i in range(len(five_words)):
+        for i in range(5):
             if english:
                 if (five_words[i].find(w) != -1):
                     ind = i
@@ -213,7 +213,7 @@ def five():
     if flag in range(6, 11):
         w = str(my_dict[flag].text())
         ind = -1
-        for i in range(len(five_words)):
+        for i in range(5):
             if english:
                 if (five_words[i].find(w) != -1):
                     ind = i
@@ -250,7 +250,7 @@ def six():
     if flag in range(1, 6):
         w = str(my_dict[flag].text())
         ind = -1
-        for i in range(len(five_words)):
+        for i in range(5):
             if english:
                 if (five_words[i].find(w) != -1):
                     ind = i
@@ -287,7 +287,7 @@ def seven():
     if flag in range(1, 6):
         w = str(my_dict[flag].text())
         ind = -1
-        for i in range(len(five_words)):
+        for i in range(5):
             if english:
                 if (five_words[i].find(w) != -1):
                     ind = i
@@ -324,7 +324,7 @@ def eight():
     if flag in range(1, 6):
         w = str(my_dict[flag].text())
         ind = -1
-        for i in range(len(five_words)):
+        for i in range(5):
             if english:
                 if (five_words[i].find(w) != -1):
                     ind = i
@@ -361,7 +361,7 @@ def nine():
     if flag in range(1, 6):
         w = str(my_dict[flag].text())
         ind = -1
-        for i in range(len(five_words)):
+        for i in range(5):
             if english:
                 if (five_words[i].find(w) != -1):
                     ind = i
@@ -398,7 +398,7 @@ def ten():
     if flag in range(1, 6):
         w = str(my_dict[flag].text())
         ind = -1
-        for i in range(len(five_words)):
+        for i in range(5):
             if english:
                 if (five_words[i].find(w) != -1):
                     ind = i
@@ -434,24 +434,28 @@ def ten():
 def english_russian():
     global english, firm, form
     english = True
-    print(english)
     firm.hide()
     form.show()
     func_for_file()
 
 def name_meaning():
     global firm, form
-    print(english)
     firm.hide()
     form.show()
     func_for_file()
 
+def back():
+    global firm, form, english
+    english = False
+    form.hide()
+    firm.show()
 app = QtGui.QApplication(sys.argv)
 form = MyApp()
 firm = MyOpp()
 firm.show()
 firm.pushButton.clicked.connect(english_russian)
 firm.pushButton_2.clicked.connect(name_meaning)
+form.pushButton_11.clicked.connect(back)
 english = False
 my_dict = {1: form.pushButton, 2: form.pushButton_2, 3: form.pushButton_3, 4: form.pushButton_4, 5: form.pushButton_5, 6: form.pushButton_6, 7: form.pushButton_7, 8: form.pushButton_8, 9: form.pushButton_9, 10: form.pushButton_10}
 my_list = [1, one, two, three, four, five, six, seven, eight, nine, ten]
