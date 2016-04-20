@@ -108,6 +108,9 @@ class Ui_MainWindow(object):
         font.setPointSize(10)
         self.pushButton_10.setFont(font)
         self.pushButton_10.setObjectName(_fromUtf8("pushButton_10"))
+        self.pushButton_11 = QtGui.QPushButton(self.centralwidget)
+        self.pushButton_11.setGeometry(QtCore.QRect(300, 370, 161, 41))
+        self.pushButton_11.setObjectName(_fromUtf8("pushButton_11"))
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -125,4 +128,5 @@ class Ui_MainWindow(object):
         self.pushButton_8.setText(_translate("MainWindow", "PushButton", None))
         self.pushButton_9.setText(_translate("MainWindow", "PushButton", None))
         self.pushButton_10.setText(_translate("MainWindow", "PushButton", None))
+        self.pushButton_11.setText(_translate("MainWindow", "ба кафо, агар форат", None))
 
